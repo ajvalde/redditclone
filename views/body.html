@@ -5,41 +5,60 @@
 
 
 <div class="container">
-  <div class="formflex">
+    <div class="formflex">
 
-  <div class="newform" >
-    <form ng-if="$ctrl.addForm" ng-submit="$ctrl.postPost()" class="formstuff" name="newPostForm" novalidate>
-        <label for="title">Title</label>
-        <br>
-        <input type="text" name="title" ng-model="$ctrl.post.title" ng-required="true">
-        <br>
-        <label for="body">Body</label>
-        <br>
-        <textarea name="body" rows="8" cols="80" ng-model="$ctrl.post.body" ng-required="true"></textarea>
-        <br>
-        <label for="author">Author</label>
-        <br>
-        <input type="text" name="author" ng-model="$ctrl.post.author" ng-required="true">
-        <br>
-        <label for="img-url" ng-required="true">Image URL</label>
-        <br>
-        <input type="text" name="image-url" ng-model="$ctrl.post.image">
-        <br>
-        <button type="sumbit" name="button">Create Post</button>
-    </form>
-    {{$ctrl.post}}
-  </div>
+        <div class="newform">
+            <form ng-if="$ctrl.addForm" ng-submit="$ctrl.postPost()" class="formstuff" name="newPostForm" novalidate>
+                <label for="title">Title</label>
+                <br>
+                <input type="text" name="title" ng-model="$ctrl.post.title" ng-required="true">
+                <br>
+                <label for="body">Body</label>
+                <br>
+                <textarea name="body" rows="8" cols="80" ng-model="$ctrl.post.body" ng-required="true"></textarea>
+                <br>
+                <label for="author">Author</label>
+                <br>
+                <input type="text" name="author" ng-model="$ctrl.post.author" ng-required="true">
+                <br>
+                <label for="img-url" ng-required="true">Image URL</label>
+                <br>
+                <input type="text" name="image-url" ng-model="$ctrl.post.image">
+                <br>
+                <button type="sumbit" name="button">Create Post</button>
+            </form>
+        </div>
 
-  <div ng-repeat="post in $ctrl.posts" class="thePost">
+        <div ng-repeat="post in $ctrl.posts" class="thePost">
 
-  <div class="">
-    <img class="postimg" src="{{post.image}}">
-    {{post.title}}
-    {{post.author}}
-    {{post.body}}
-  </div>
-</div>
+            <div class="">
+                <img class="postimg" src="{{post.image}}">
+                <div class="post_title">
+                    <h3>{{post.title}}</h3>
+                </div>
+                <div class="post_author">
+                    <h5>{{post.author}}</h5>
+                </div>
+                {{post.body}}
 
-</div>
+                <div class="post_comment">
+                    <a ng-click="$ctrl.writeComment()" href="#">Comment</a>
+                    
+                    <form class="commentForm" ng-submit="$ctrl.postComment(post)">
+                        <div ng-if="$ctrl.showCom" class="comment_input">
+                            <input ng-model="post.newComment.coms" name="comment" placeholder="write comment">
+                            <button type="submit" name="button">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="posted_comments">
+                    <p ng-repeat="comment in post.comments">
+                        {{comment.coms}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </div>

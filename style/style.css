@@ -97,18 +97,56 @@ input, textarea {
 }
 
 .thePost{
-  background-color: skyblue;
+  background-color: steelblue;
   width: 45em;
-  height: 18em;
+  height: 23em;
   border-radius: 10px;
   margin: 10px;
 }
 .postimg {
-  margin: 5px;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-top: 20px;
   border-radius: 5px;
   width: 14em;
-  height: 14em;
+  height: 12em;
+  float: left;
+
 }
+
+.post_title {
+  margin-right: 10em;
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.post_author {
+  margin-right: 2em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.post_comment{
+  margin-top: 145px;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.comment_input{
+  margin-left: 15px;
+  margin-right: 3px;
+}
+
+a {
+  margin-top: 16px;
+}
+
+p {
+  margin: 0;
+}
+
 
 /*.content{
   padding: 20px;
