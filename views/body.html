@@ -1,0 +1,45 @@
+<div class="newpost">
+    <input class="filter" type="text" name="" placeholder="Filter">
+    <button ng-click="$ctrl.showForm()" type="button" name="button">New Post</button>
+</div>
+
+
+<div class="container">
+  <div class="formflex">
+
+  <div class="newform" >
+    <form ng-if="$ctrl.addForm" ng-submit="$ctrl.postPost()" class="formstuff" name="newPostForm" novalidate>
+        <label for="title">Title</label>
+        <br>
+        <input type="text" name="title" ng-model="$ctrl.post.title" ng-required="true">
+        <br>
+        <label for="body">Body</label>
+        <br>
+        <textarea name="body" rows="8" cols="80" ng-model="$ctrl.post.body" ng-required="true"></textarea>
+        <br>
+        <label for="author">Author</label>
+        <br>
+        <input type="text" name="author" ng-model="$ctrl.post.author" ng-required="true">
+        <br>
+        <label for="img-url" ng-required="true">Image URL</label>
+        <br>
+        <input type="text" name="image-url" ng-model="$ctrl.post.image">
+        <br>
+        <button type="sumbit" name="button">Create Post</button>
+    </form>
+    {{$ctrl.post}}
+  </div>
+
+  <div ng-repeat="post in $ctrl.posts" class="thePost">
+
+  <div class="">
+    <img class="postimg" src="{{post.image}}">
+    {{post.title}}
+    {{post.author}}
+    {{post.body}}
+  </div>
+</div>
+
+</div>
+
+</div>

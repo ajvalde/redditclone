@@ -1,0 +1,179 @@
+body{
+  margin: 0;
+}
+
+h1,h2,h3{
+  margin: 0;
+}
+
+
+
+#menu-bar{
+  background: skyblue;
+  color: black;
+  padding: 10px;
+}
+
+#menu-bar h1{
+  font-size: 24px;
+  font-weight: normal;
+  display: inline-block;
+}
+
+#menu-bar ul{
+  float: right;
+  list-style-type: none;
+  padding: 0;
+  margin: 6px 0;
+}
+
+#menu-bar li{
+  float: right;
+  margin-left: 20px;
+}
+
+#menu-bar a{
+  color: #fff
+}
+
+main{
+  background: #eee;
+  width: 80%;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+button {
+  margin-top: 5px;
+  border: 0;
+  border-radius: 5px;
+  background-color: skyblue;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+.filter {
+  border: 1px;
+  border-style: solid;
+  border-color: silver;
+}
+
+.newpost{
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.newform{
+  border: 0;
+  border-radius: 10px;
+  background-color: steelblue;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+form {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+input{
+  height: 20px;
+}
+
+input, textarea {
+  border: 0;
+  border-radius: 5px;
+}
+
+.formflex{
+  display: flex;
+  flex-direction: column;
+}
+
+.thePost{
+  background-color: skyblue;
+  width: 45em;
+  height: 18em;
+  border-radius: 10px;
+  margin: 10px;
+}
+.postimg {
+  margin: 5px;
+  border-radius: 5px;
+  width: 14em;
+  height: 14em;
+}
+
+/*.content{
+  padding: 20px;
+}
+
+.content button,
+.content input[type="submit"]{
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #777;
+  border: 0;
+  box-shadow: 2px 2px 2px rgba(20,20,20,0.1);
+  font-size: 16px;
+}
+
+.content button:nth-child(2){
+  float: right;
+}
+
+.content ul{
+  padding: 0;
+  list-style-type: none;
+  margin: 30px 0;
+}
+
+.content li{
+  padding: 15px 0;
+  border-top: 1px solid #e2e2e2;
+  color: #444;
+}
+
+.content li span{
+  float: right;
+}
+
+.content li h3{
+  display: inline-block;
+  font-weight: normal;
+  font-size: 22px;
+}
+
+.content input{
+  width: 90%;
+  padding: 10px 5%;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  margin: 10px 0;
+}
+
+.content input[type="submit"]:last-child{
+  width: 150px;
+  display: block;
+  margin: 15px auto;
+}
+
+.remove{
+  float: right;
+  padding: 5px;
+  background: #fff;
+  width: 18px;
+  text-align: center;
+  border-radius: 20px;
+  color: crimson;
+  cursor: pointer;
+  margin-left: 10px;
+}*/
